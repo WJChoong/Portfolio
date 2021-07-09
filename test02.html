@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Bootstrap 4 accordion collapse when
+		clicking the whole header div
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body>
+	<center>
+		<div class="container">
+
+		<h1 style="color:green;padding:13px;">GeeksforGeeeks</h1>
+		<br>
+		<p>
+			Bootstrap 4 accordion collapse when
+			clicking the whole header div
+		</p>
+		<div id="accordion">
+			<div class="card ">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseOne">
+					GeeksforGeeks
+				</div>
+				<div id="collapseOne"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						GeeksforGeeks is a computer science portal.
+						It is the best platform to lean programming.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseTwo">
+					Bootstrap
+				</div>
+				<div id="collapseTwo"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						Bootstrap is free and open-source collection
+						of tools for creating websites and web applications.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseThree">
+					HTML
+				</div>
+				<div id="collapseThree"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						HTML stands for HyperText Markup Language.
+						It is used to design web pages using markup language.
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+</body>
+
+</html>

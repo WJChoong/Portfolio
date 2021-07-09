@@ -4,8 +4,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80');
+            /*the background image is taken from unsplash website*/
+        }
+        img{
+            max-width: 50%;
+            max-height: 100%;
+            display: block;
+        }
+    </style>
+    <script src="static/js/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    Hello
+    <br>
+    <div class="card-body" style="margin-top: 20px;">
+        <div class="card-body row">
+            <div class="col-md-6 col-lg-4 col-xl-9 border" id="intro">
+                <h1>Hello,<br>
+                    Welcome to my Portfolio
+                </h1>
+                <h2>{{pos}}</h2>
+                <h4>{{descript}}</h4>
+            </div>
+              
+        </div>
+        <br>
+        <div class="card-body"></div>
+        <!-- <div id="accordion">
+			<div class="card ">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseOne">
+					Webs
+				</div>
+				<div id="collapseOne"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						Person
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseTwo">
+					Java Projects
+				</div>
+				<div id="collapseTwo"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						The Java Projects that I had done
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header collapsed card-link"
+					data-toggle="collapse"
+					data-target="#collapseThree">
+					AI Projects
+				</div>
+				<div id="collapseThree"
+					class="collapse"
+					data-parent="#accordion">
+					<div class="card-body">
+						The AI projects that I had done
+					</div>
+				</div>
+			</div>
+		</div> -->
+    </div>    
+    <script>
+        const app = new Vue({
+            el: "#intro",
+            data:{
+                intro:{
+                    msg: "hello", 
+                }
+            },
+            computed:{
+                pos:{
+                    get:function(){
+                        return "2nd year IT student";
+                    }
+                },
+                descript:{
+                    get:function(){
+                        return `
+                        Passionate about codings and building a software. 
+                        Currently, I'm working on building websites.
+                        
+                        `
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 </html>
