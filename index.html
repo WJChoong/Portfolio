@@ -16,6 +16,14 @@
             max-height: 100%;
             display: block;
         }
+        strong{
+            font-family: "Brush Script MT", cursive;
+            font-size: 1.5rem;
+        }
+        li{
+            margin-right: 5px;
+            font-size: 1.3rem;
+        }
     </style>
     <script src="static/js/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -24,20 +32,41 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html"><strong>CHOONG WEI JIE</strong></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+      </nav>
     <br>
     <div class="card-body" style="margin-top: 20px;">
         <div class="card-body row">
-            <div class="col-md-6 col-lg-4 col-xl-9 border" id="intro">
+            <div class="col-md-6 col-lg-4 col-xl-9" id="intro">
                 <h1>Hello,<br>
-                    Welcome to my Portfolio
+                    <small> Allow me to have a brief introduction</small>
                 </h1>
-                <h2>{{pos}}</h2>
-                <h4>{{descript}}</h4>
+                <h3 style="font-family: Georgia, serif;">{{pos}}</h3>
+                <h5>{{descript01}}</h5>
+                <h5>{{descript02}}</h5>
             </div>
               
         </div>
         <br>
-        <div class="card-body"></div>
+        
         <!-- <div id="accordion">
 			<div class="card ">
 				<div class="card-header collapsed card-link"
@@ -97,13 +126,14 @@
                         return "2nd year IT student";
                     }
                 },
-                descript:{
+                descript01:{
                     get:function(){
-                        return `
-                        Passionate about codings and building a software. 
-                        Currently, I'm working on building websites.
-                        
-                        `
+                        return "Passionate about codings and building a software."
+                    }
+                },
+                descript02:{
+                    get:function(){
+                        return "Currently, I'm working on building websites."
                     }
                 }
             }
