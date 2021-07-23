@@ -1,12 +1,10 @@
+<DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
+    <?php
+    require "head.php";
+    ?>
+   <style>
         body{
             /*background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'); */
             /*the background image is taken from unsplash website*/
@@ -22,11 +20,12 @@
             font-size: 1.5rem;
         }
         h1,
+        h2,
         h5,
         h3{
             font-family: 'Lobster', cursive; 
-            font-size: 36px; 
             font-weight: normal; 
+            color:  #E2E5DE;
             line-height: 48px; 
             margin: 0 0 18px; 
             text-shadow: 1px 0 0 #000;
@@ -35,7 +34,7 @@
             margin-right: 5px;
             font-size: 1.3rem;
         }
-        #myVideo {
+        #myVideo{
             position: fixed;
             right: 0;
             bottom: 0;
@@ -43,42 +42,10 @@
             min-height: 100%;
         }
     </style>
-    <script src="static/js/vue.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-
+    
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="static/img/stars.mp4" type="video/mp4">
-        <!-- get from https://www.youtube.com/watch?v=aYBGV8ssve4&ab_channel=DrewRyan -->
-    </video>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="index.html"><strong>CHOONG WEI JIE</strong></a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-      </nav>
+    <?php require "navbar.php"; ?>
     <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.html"><strong>CHOONG WEI JIE</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,11 +93,10 @@
     <div class="card-body" style="margin-top: 20px;">
         <div class="card-body row">
             <div class="col-md-6 col-lg-4 col-xl-9" id="intro">
-                <h1 class="text-light">Hello,<br>
-                    <small> Allow me to have a brief introduction</small>
-                </h1>
-                <h3 class="text-light">{{pos}}</h3>
-                <h5 class="text-light">
+                <h1>Hello,<br></h1>
+                <h2> Allow me to have a brief introduction</h2>
+                <h3>{{pos}}</h3>
+                <h5>
                     {{descript01}}
                     <br>
                     {{descript02}}
@@ -139,51 +105,6 @@
               
         </div>
         <br>
-        
-        <!-- <div id="accordion">
-			<div class="card ">
-				<div class="card-header collapsed card-link"
-					data-toggle="collapse"
-					data-target="#collapseOne">
-					Webs
-				</div>
-				<div id="collapseOne"
-					class="collapse"
-					data-parent="#accordion">
-					<div class="card-body">
-						Person
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header collapsed card-link"
-					data-toggle="collapse"
-					data-target="#collapseTwo">
-					Java Projects
-				</div>
-				<div id="collapseTwo"
-					class="collapse"
-					data-parent="#accordion">
-					<div class="card-body">
-						The Java Projects that I had done
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header collapsed card-link"
-					data-toggle="collapse"
-					data-target="#collapseThree">
-					AI Projects
-				</div>
-				<div id="collapseThree"
-					class="collapse"
-					data-parent="#accordion">
-					<div class="card-body">
-						The AI projects that I had done
-					</div>
-				</div>
-			</div>
-		</div> -->
     </div>    
     <script>
         const app = new Vue({
