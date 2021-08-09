@@ -42,6 +42,51 @@
 </head>
 <body>
     <?php require "navbar.php"; ?>
-    
+    <div class="row justify-content-center">
+        <div class="col-8 col-md-6 px-3">
+            <div class="card col-md-8">
+                <div class="card-header collapsed card-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne">
+                    Webs
+                </div>
+                <div id="collapseOne"
+                    class="collapse"
+                    data-parent="#accordion">
+                    <div class="card-body">
+                        Person
+                    </div>
+                </div>
+            </div>
+            <div class="card col-md-8">
+                <div class="card-header collapsed card-link"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo">
+                    Java Projects
+                </div>
+                <div id="collapseTwo"
+                    class="collapse"
+                    data-parent="#accordion">
+                    <div class="card-body">
+                        The Java Projects that I had done
+                    </div>
+                </div>
+            </div>
+            <div class="card col-md-8">
+                <div class="card-header collapsed card-link"
+                    data-toggle="collapse"
+                    data-target="#collapseThree">
+                    AI Projects
+                </div>
+                <div id="collapseThree"
+                    class="collapse "
+                    data-parent="#accordion">
+                    <div class="card-body">
+                        The AI projects that I had done
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div> 
 </body>
 </html>
