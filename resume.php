@@ -34,14 +34,12 @@
             color: rgba(0, 0, 0, 0.5)
         }
         fieldset {
-            background-color: rgba(0,0,0, 0.5);
-            border-radius: 4px;
+            background-color: white;
+            border-radius: 4px white;
         }
-
         legend {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 1px solid black;
+            border-radius: 10px;
             color: var(--purple);
             font-size: 17px;
             font-weight: bold;
@@ -54,14 +52,20 @@
         #title{
             font-size:1.5rem;
         }
+        #space{
+            margin-bottom: 1rem;
+        }
+        #category{
+            margin: 1rem;
+        }
     </style>
 </head>
 <?php require "navbar.php"; ?>
 <body style="margin-top: 90px;">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="category">
         <fieldset class="col-8 col-md-8 px-3 bg-dark">
-            <legend class="bg-muted">Education</legend>
-            <div class="table-dark">
+            <legend class="bg-dark text-light h3">Education</legend>
+            <div class="table-dark" id="space">
                 <div class="row" style="padding: 1rem;">
                     <div class="col-md-9">
                         <span class="font-weight-bold" id="title">Asia Pacific University(APU)</span>
@@ -86,36 +90,12 @@
                     </div>
                 </div>
             </div>
-            <!-- <table class="table table-dark">
-                <thead>
-                    <tr class="row">
-                        <th class="col-md-8 ml-3">
-                            Asia Pacific University
-                            <br>
-                            <span>Diploma in ICT Specialism in Software Engineering</span>
-                        </th>
-                        <th class="col-md-4 ml-3">May 2019 - September 2021</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="row">
-                        <th class="col-md-8 ml-3">
-                            Poi Lam High School
-                            <br>
-                            <span>IGSCE(Science Stream)</span>
-                        </th>
-                        <th class="col-md-4 ml-3">January 2014 - November 2018</th>
-                    <tr>
-                </tbody>
-            </table> -->
         </fieldset>
     </div>
-    <br>
-    <br>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="category">
         <fieldset class="col-8 col-md-8 px-3 bg-dark">
-            <legend class="bg-muted">Work Experience</legend>
-            <div class="table-dark">
+            <legend class="bg-dark text-light h3">Work Experience</legend>
+            <div class="table-dark" id="space">
                 <div class="row" style="padding: 1rem;">
                     <div class="col-md-9">
                         <span class="font-weight-bold" id="title">Junior Technical Assistant</span>
@@ -127,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="table-dark">
+            <div class="table-dark" id="space">
                 <div class="row" style="padding: 1rem;">
                     <div class="col-md-9">
                         <span class=" font-weight-bold" id="title">Junior Event Marshal</span>
@@ -144,13 +124,64 @@
                     <div class="col-md-9">
                         <span class="font-weight-bold" id="title">Web Developer Intern</span>
                         <br>
-                        <span>Blue Ocean IT</span>
+                        <span>Blue Ocean IT Sdn. Bhd.</span>
                     </div>
                     <div class="col-md-3 font-weight-light text-warning">
                         <span>1st July 2021 - 26th August 2021</span>
                     </div>
                 </div>
             </div>
+        </fieldset>
+    </div>
+    <div class="row justify-content-center" id="category">
+        <fieldset class="col-8 col-md-8 px-3 bg-dark">
+            <legend class="bg-dark text-light h3">Work Experience</legend>
+            <div class="table-dark" id="space">
+                <div class="row" style="padding: 1rem;">
+                    <div class="col-md-9">
+                        <span class="font-weight-bold" id="title">Junior Technical Assistant</span>
+                        <br>
+                        <span>Asia Pacific University(APU)</span>
+                    </div>
+                    <div class="col-md-3 font-weight-light text-warning">
+                        <span>December 2019 - Present</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-dark" id="space">
+                <div class="row" style="padding: 1rem;">
+                    <div class="col-md-9">
+                        <span class=" font-weight-bold" id="title">Junior Event Marshal</span>
+                        <br>
+                        <span>Archery Atag Malaysia(ATAG)</span>
+                    </div>
+                    <div class="col-md-3 font-weight-light text-warning">
+                        <span>July 2019 - Present</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-dark">
+                <div class="row" style="padding: 1rem; margin-bottom: 1rem;">
+                    <div class="col-md-9">
+                        <span class="font-weight-bold" id="title">Web Developer Intern</span>
+                        <br>
+                        <span>Blue Ocean IT Sdn. Bhd.</span>
+                    </div>
+                    <div class="col-md-3 font-weight-light text-warning">
+                        <span>1st July 2021 - 26th August 2021</span>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="row justify-content-center" id="category">
+        <fieldset class="col-8 col-md-8 px-3 bg-dark">
+            <legend class="bg-dark text-light h3">Skills</legend>
+        </fieldset>
+    </div>
+    <div class="row justify-content-center" id="category">
+        <fieldset class="col-8 col-md-8 px-3 bg-dark">
+            <legend class="bg-dark text-light h3">Language</legend>
         </fieldset>
     </div>
 </body>
